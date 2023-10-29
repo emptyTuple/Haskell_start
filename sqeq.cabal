@@ -1,0 +1,24 @@
+cabal-version:       2.4
+name:                sqeq
+version:             0.1
+license:             MIT
+license-file:        LICENSE
+
+library
+  default-language: GHC2021
+  build-depends:    base
+  exposed-modules:  Sqeq
+  hs-source-dirs:   lib
+
+executable sqeq
+  default-language: GHC2021
+  build-depends:    base, sqeq
+  main-is:          Main.hs
+  hs-source-dirs:   exe
+
+test-suite tests
+  default-language: GHC2021
+  build-depends:    base, tasty
+  type:             exitcode-stdio-1.0
+  main-is:          Tests.hs
+  hs-source-dirs:   test
