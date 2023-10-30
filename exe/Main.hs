@@ -1,14 +1,13 @@
-import Sqeq (solveSquare)
+import         System.Environment (getArgs)
+
+import         Sqeq (solveSquare)
 
 main :: IO ()
 main = do
-    putStrLn "Program calculates roots of quadratic equations"
-    putStrLn "Enter a:"
-    x <- readLn
-    putStrLn "Enter b:"
-    y <- readLn
-    putStrLn "Enter c:"
-    z <- readLn
+    [as, bs, cs] <- getArgs
+    let x = read as
+        y= read bs
+        z = read cs    
     putStrLn $ "Roots are: " ++ show (solveSquare x y z)
     
 
