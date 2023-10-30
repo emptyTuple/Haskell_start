@@ -18,7 +18,7 @@ executable sqeq
 
 test-suite tests
   default-language: GHC2021
-  build-depends:    base, tasty
+  build-depends:    base, tasty, tasty-hunit
   type:             exitcode-stdio-1.0
   main-is:          Tests.hs
   hs-source-dirs:   test
