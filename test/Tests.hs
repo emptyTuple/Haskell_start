@@ -15,5 +15,7 @@ main =
           solveSquare    1 (-2) (-3) @?= [-1,3]
       , testCase      "-x² - 2x + 15 = 0 -> [3,-5]" $
           solveSquare    (-1) (-2) 15 @?= [3,-5]
+      , testCase      "5x² + 5x + 5 = 0 -> []" $
+          solveSquare    5 5 5 @?= []
       ]
 
